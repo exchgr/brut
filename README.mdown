@@ -1,3 +1,3 @@
 # Brüt
 
-Gets your password, eventually, whether you like it or not.
+Generates all the strings.
