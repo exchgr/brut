@@ -42,7 +42,9 @@ int main() {
   char *emptyString = (char *) malloc(sizeof(char) * maxElement);
   char **currentString = &emptyString;
 
-  count(minAscii, maxAscii, minElement, maxElement, 0, currentString);
+  for (int length = minElement + 1; length <= maxElement; length++) {
+    count(minAscii, maxAscii, minElement, length, 0, currentString);
+  }
 
   return 0;
 }
