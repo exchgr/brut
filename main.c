@@ -3,8 +3,6 @@
 #include <stdlib.h>
 
 void count(char minAscii, char maxAscii, int minElement, int maxElement, int position, char** currentString) {
-  /* printf("\ncount(%c, %c, %d, %d, %d, %s)\n", minAscii, maxAscii, minElement, maxElement, position, *currentString); */
-
   for (char character = minAscii; character <= maxAscii; character++) {
     (*currentString)[position] = character; // Increment the character at the current position
 
