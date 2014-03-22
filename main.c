@@ -3,25 +3,16 @@
 #include <stdlib.h>
 
 void count(char minAscii, char maxAscii, int minElement, int maxElement, int position, char** currentString) {
-  printf("\ncount(%c, %c, %d, %d, %d, %s)\n", minAscii, maxAscii, minElement, maxElement, position, *currentString);
+  /* printf("\ncount(%c, %c, %d, %d, %d, %s)\n", minAscii, maxAscii, minElement, maxElement, position, *currentString); */
 
   for (char character = minAscii; character <= maxAscii; character++) {
-    // increment the character at the current position
-    (*currentString)[position] = character;
-    getchar();
+    (*currentString)[position] = character; // Increment the character at the current position
+    printf("%s\n", *currentString); // Print the current string
 
-    // Print the current string numerically, as a string, and its address.
-    for (int j = 0; j < maxElement; j++) {
-      printf("%d\t", (*currentString)[j]);
-    }
-    printf("%s %p", *currentString, currentString);
-
-    // increase the level of recursion
     if (position < maxElement - 1) {
-      count(minAscii, maxAscii, minElement, maxElement, position + 1, currentString);
+      count(minAscii, maxAscii, minElement, maxElement, position + 1, currentString); // increase the level of recursion
     }
   }
-  printf("\ncount(%c, %c, %d, %d, %d, %s) finished", minAscii, maxAscii, minElement, maxElement, position, *currentString);
 
   /*
    * Issues:
