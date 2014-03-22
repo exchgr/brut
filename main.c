@@ -23,11 +23,9 @@ void count(char minAscii, char maxAscii, int minElement, int maxElement, int pos
 
 int main() {
   int minElement = 0;
-  int maxElement = 4;
-  /* char minAscii = 33; */
-  /* char maxAscii = 126; */
-  char minAscii = 65;
-  char maxAscii = 68;
+  int maxElement = 10;
+  char minAscii = 33;
+  char maxAscii = 126;
 
   // This is the most reliable way I could think of to make a pointer to a string.
   char *emptyString = (char *) malloc(sizeof(char) * maxElement);
