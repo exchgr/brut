@@ -14,19 +14,22 @@ void count(char minAscii, char maxAscii, int minElement, int maxElement, int pos
   }
 }
 
-int main() {
-  int minElement = 0;
-  int maxElement = 10;
-  char minAscii = 33;
-  char maxAscii = 126;
-
-  // This is the most reliable way I could think of to make a pointer to a string.
+void brut(char minAscii, char maxAscii, int minElement, int maxElement) {
   char emptyString[maxElement];
   char *currentString = emptyString;
 
   for (int length = minElement + 1; length <= maxElement; length++) {
     count(minAscii, maxAscii, minElement, length, 0, currentString);
   }
+}
+
+int main() {
+  int minElement = 0;
+  int maxElement = 10;
+  char minAscii = 33;
+  char maxAscii = 126;
+
+  brut(minAscii, maxAscii, minElement, maxElement);
 
   return 0;
 }
