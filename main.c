@@ -16,6 +16,10 @@ void count(char minAscii, char maxAscii, int minElement, int maxElement, int pos
 
 void brut(char minAscii, char maxAscii, int minElement, int maxElement) {
   char emptyString[maxElement];
+  for (int i = 0; i <= maxElement; i++) {
+    emptyString[i] = '\0';
+  }
+
   char *currentString = emptyString;
 
   for (int length = minElement + 1; length <= maxElement; length++) {
