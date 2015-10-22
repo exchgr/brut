@@ -14,13 +14,15 @@ void count(char minAscii, char maxAscii, int minElement, int maxElement, int pos
   }
 }
 
-void brut(char minAscii, char maxAscii, int minElement, int maxElement) {
-  char emptyString[maxElement];
-  for (int i = 0; i <= maxElement; i++) {
-    emptyString[i] = '\0';
+void initializeString(char* string, int length) {
+  for (int i = 0; i <= length; i++) {
+    string[i] = '\0';
   }
+}
 
-  char *currentString = emptyString;
+void brut(char minAscii, char maxAscii, int minElement, int maxElement) {
+  char currentString[maxElement];
+  initializeString(currentString, maxElement);
 
   for (int length = minElement + 1; length <= maxElement; length++) {
     count(minAscii, maxAscii, minElement, length, 0, currentString);
