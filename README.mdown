@@ -1,3 +1,11 @@
 # Brüt
 
 Generates all the strings.
+
+## Installation
+
+Compile by running `gcc main.c`
+
+## Usage
+
+Run the program with `./a.out`
