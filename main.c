@@ -30,10 +30,11 @@ void brut(char minAscii, char maxAscii, int minElement, int maxElement) {
 }
 
 int main() {
-  int minElement = 0;
-  int maxElement = 10;
-  char minAscii = 33;
-  char maxAscii = 126;
+  // Set up the bounds for the strings
+  int minElement = 0;   // Start at the beginning
+  int maxElement = 10;  // Generate strings up to 10 characters long
+  char minAscii  = 33;  // '!'
+  char maxAscii  = 126; // '~'
 
   brut(minAscii, maxAscii, minElement, maxElement);
 
